@@ -1,0 +1,413 @@
+@use "variables";
+
+.main {
+    color: $light-text-color;
+}
+
+.title {
+
+    &-hero {
+        font-family: $title-font;
+        font-size: 44px;
+        line-height: 1.18;
+        max-width: 532px;
+        margin-bottom: 20px;
+    }
+
+    &-colors {
+        font-family: $accent-font;
+        font-style: italic;
+        color: $light-accent-color;
+    }
+}
+
+.button {
+    @extend %button;
+}
+
+.section {
+
+    &-hero {
+        padding: 150px 0;
+        background: transparent;
+
+        .text {
+            @extend %text;
+            max-width: 440px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-about {
+        padding-bottom: 120px;
+    }
+
+    &-quote {
+        padding: 20px 0 120px 0;
+    }
+
+    &-video {
+
+        .title-section {
+            @extend %title;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            @extend %text;
+        }
+    }
+
+    &-promises {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.bg-container {
+    padding: 45px 0;
+    background: linear-gradient(92deg, rgba(33, 36, 54, 0.5) 0.04%, rgba(33, 36, 54, 0) 44.04%),
+        url(../images/city.jpg);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.news-box {
+    padding: 45px 0;
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 700px;
+    width: 100%;
+    background: $dark-text-color;
+    opacity: 0.9;
+    display: flex;
+    justify-content: start;
+}
+
+.about {
+    &-list {
+        flex: 1;
+    }
+
+    &-item {
+        text-align: center;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100px;
+            height: 1px;
+            border-bottom: 1px solid $light-accent-color;
+            box-sizing: border-box;
+            transform: translateX(-50%);
+        }
+
+        &:not(:first-child) {
+            padding-top: 40px;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 40px;
+        }
+
+        .big-text {
+            display: block;
+            font-family: $title-font;
+            font-size: 68px;
+            line-height: 1.06;
+            margin-bottom: 12px;
+
+            &__accent {
+                font-family: $title-font;
+                font-size: 40px;
+                line-height: 1.25;
+                text-align: center;
+                color: $light-border-color;
+            }
+        }
+    }
+
+    &-text {
+        font-family: $font-main;
+        font-size: 18px;
+        line-height: 1.44;
+        opacity: 0.8;
+    }
+}
+
+.text-box {
+    flex: 1;
+
+    .text {
+        @extend %text;
+        margin-bottom: 50px;
+    }
+
+    .button {
+        background: inherit;
+    }
+}
+
+.benefits {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    &-item {
+        max-width: 530px;
+        width: 100%;
+        padding: 50px 35px 100px 35px;
+        border-top: 1px solid $light-border-color;
+
+        .title-section {
+            @extend %title;
+            margin-bottom: 30px;
+        }
+
+        .text {
+            @extend %text;
+        }
+    }
+}
+
+.quote {
+    &-block {
+        padding: 100px 300px 100px 160px;
+        color: $dark-text-color;
+        background: linear-gradient(0deg, rgba(25, 28, 41, 0.84), rgba(25, 28, 41, 0.84)),
+            url('../images/section-quote.jpg') no-repeat;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    &-text {
+        font-family: $nav-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1.44;
+        letter-spacing: 0.04em;
+        margin-bottom: 40px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background: url(../images/quote-icon-ligth.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            width: 102px;
+            height: 184px;
+            top: -35px;
+            left: -10%;
+        }
+    }
+
+    &-author {
+        font-family: $accent-font;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        color: $dark-text-color;
+    }
+}
+
+.tv-frame {
+    position: relative;
+    display: block;
+    background: url(../images/tablet.png);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    max-width: 970px;
+    height: 610px;
+    margin: auto;
+    margin-bottom: 50px;
+
+    .video {
+        position: absolute;
+        display: block;
+        top: 30px;
+        left: 45px;
+        width: 840px;
+        height: 540px;
+        border: 1px solid $dark-border-color;
+    }
+}
+
+.video-text {
+    width: 970px;
+    margin: auto;
+}
+
+.bg-container__promises {
+    padding: 45px 0;
+    background: linear-gradient(0deg, rgba(25, 28, 41, 0.84), rgba(25, 28, 41, 0.84)),
+        url(../images/on-section.jpg);
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    object-fit: contain;
+    min-height: 540px;
+}
+
+.promises-text-box {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 700px;
+    width: 100%;
+    background: $dark-text-color;
+    opacity: 0.9;
+    display: flex;
+    justify-content: start;
+}
+
+
+.promises {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        gap: 70px;
+        padding: 75px 0 75px 70px;
+    }
+
+    &-item {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    &-title {
+        font-family: $title-font;
+        font-size: 24px;
+        line-height: 2;
+        margin-bottom: 15px;
+    }
+
+    &-text {
+        font-family: $font-main;
+        font-size: 18px;
+        line-height: 1.44;
+        opacity: 0.8;
+    }
+
+    &-button {
+        @extend %button;
+        margin-top: 20px;
+        border: 1px solid $light-border-color;
+        padding: 33px 79px;
+
+        &::after {
+            width: 37%;
+            left: 35%;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                width: 45%;
+                height: 25%;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            scale: 1.1;
+            border: 1px solid $light-button-hover-color;
+
+            &::after {
+                opacity: 0.2;
+            }
+        }
+    }
+}
+
+.section {
+    &-client {
+        padding-bottom: 100px;
+
+        .title-section {
+            @extend %title;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            max-width: 400px;
+            @extend %text;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.client {
+    &-list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &-item {
+        flex: 1;
+        padding: 30px 40px;
+
+        background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)),
+            url(../images/client2.jpg);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+        color: $dark-text-color;
+        opacity: 0.8;
+        min-height: 340px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        &:first-child {
+            background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)),
+                url(../images/client1.jpg);
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: cover;
+
+        }
+
+        &:last-child {
+            background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)),
+                url(../images/client3.jpg);
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: cover;
+        }
+    }
+
+    &-quote {
+        display: block;
+    }
+
+    &-quote-text {
+        font-family: $nav-font;
+        font-size: 16px;
+        line-height: 1.62;
+    }
+
+    &-quote-author {
+        font-family: $accent-font;
+        font-style: italic;
+        font-size: 20px;
+        letter-spacing: 0.08em;
+        display: block;
+        margin-top: auto;
+
+    }
+}

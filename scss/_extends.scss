@@ -1,0 +1,63 @@
+@use "variables";
+
+%title {
+  font-family: $title-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+%text {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.44;
+  opacity: 0.8;
+}
+
+%button {
+  font-family: $button-font;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $light-button-color;
+  border: inherit;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: $light-button-color;
+    backdrop-filter: blur(4.5px);
+    width: 85%;
+    height: 13px;
+    opacity: 0.3;
+    top: 50%;
+    left: 15%;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 90%;
+      height: 90%;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    scale: 1.2;
+    color: $light-button-hover-color;
+
+    &::after {
+      background: $light-button-hover-color;
+      opacity: 0.3;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
