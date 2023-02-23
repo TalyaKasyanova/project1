@@ -63,6 +63,46 @@
         background-color: $light-bg-color;
 
 
+        &::-webkit-input-placeholder {
+            color: $light-text-color;
+            opacity: 0.5;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: $accent-font;
+            background-color: $light-bg-color;
+        }
+
+
+        &::-moz-placeholder {
+            color: $light-text-color;
+            opacity: 0.5;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: $accent-font;
+            background-color: $light-bg-color;
+        }
+
+
+        &:-ms-input-placeholder {
+            color: $light-text-color;
+            opacity: 0.5;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: $accent-font;
+            background-color: $light-bg-color;
+        }
+
+
+        &::-ms-input-placeholder {
+            color: $light-text-color;
+            opacity: 0.5;
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: $accent-font;
+            background-color: $light-bg-color;
+        }
+
+
         &::placeholder {
             color: $light-text-color;
             opacity: 0.5;

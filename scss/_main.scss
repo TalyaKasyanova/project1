@@ -70,6 +70,7 @@
         url(../images/city.jpg);
     background-size: 50% 100%;
     background-repeat: no-repeat;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -186,6 +187,7 @@
         background: linear-gradient(0deg, rgba(25, 28, 41, 0.84), rgba(25, 28, 41, 0.84)),
             url('../images/section-quote.jpg') no-repeat;
         background-size: cover;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 
@@ -205,6 +207,7 @@
             background: url(../images/quote-icon-ligth.png);
             background-size: 100%;
             background-repeat: no-repeat;
+            -o-object-fit: cover;
             object-fit: cover;
             width: 102px;
             height: 184px;
@@ -228,7 +231,8 @@
     display: block;
     background: url(../images/tablet.png);
     background-repeat: no-repeat;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
     max-width: 970px;
     height: 610px;
     margin: auto;
@@ -256,7 +260,8 @@
         url(../images/on-section.jpg);
     background-repeat: no-repeat;
     background-size: 50% 100%;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
     min-height: 540px;
 }
 
@@ -363,6 +368,7 @@
         background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)),
             url(../images/client2.jpg);
         background-repeat: no-repeat;
+        -o-object-fit: cover;
         object-fit: cover;
         background-size: cover;
         color: $dark-text-color;
@@ -378,6 +384,7 @@
             background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)),
                 url(../images/client1.jpg);
             background-repeat: no-repeat;
+            -o-object-fit: cover;
             object-fit: cover;
             background-size: cover;
 
@@ -387,6 +394,7 @@
             background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)),
                 url(../images/client3.jpg);
             background-repeat: no-repeat;
+            -o-object-fit: cover;
             object-fit: cover;
             background-size: cover;
         }

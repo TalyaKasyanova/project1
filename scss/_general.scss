@@ -16,6 +16,7 @@ body {
 
 a {
   cursor: pointer;
+  outline: 0;
 }
 
 .box {
@@ -24,6 +25,7 @@ a {
   background-size: 100% 20%;
   background-position: top;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 

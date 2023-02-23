@@ -68,6 +68,7 @@
             background-size: 100% 20%;
             background-position: top;
             background-repeat: no-repeat;
+            -o-object-fit: cover;
             object-fit: cover;
         }
 
@@ -93,6 +94,13 @@
                     background: $dark-button-color;
                     opacity: 0.3;
                     transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
+                }
+            }
+
+            &-link {
+                &:focus {
+                    color: $dark-button-hover-color;
+                    font-weight: bold;
                 }
             }
         }
@@ -131,7 +139,7 @@
         }
 
         .news-box {
-            background: #161926;
+            background: $dark-bg-color;
             opacity: 0.9;
         }
 
@@ -150,6 +158,7 @@
                 &::before {
                     background: url(../images/quote-icon.png);
                     background-repeat: no-repeat;
+                    -o-object-fit: cover;
                     object-fit: cover;
                 }
             }
@@ -196,6 +205,34 @@
                 background: $dark-bg-color;
                 color: $dark-text-color;
                 font-size: 18px;
+
+                &::-webkit-input-placeholder {
+                    color: $dark-text-color;
+                    background-color: $dark-bg-color;
+                    opacity: 0.8;
+                    font-size: 18px;
+                }
+
+                &::-moz-placeholder {
+                    color: $dark-text-color;
+                    background-color: $dark-bg-color;
+                    opacity: 0.8;
+                    font-size: 18px;
+                }
+
+                &:-ms-input-placeholder {
+                    color: $dark-text-color;
+                    background-color: $dark-bg-color;
+                    opacity: 0.8;
+                    font-size: 18px;
+                }
+
+                &::-ms-input-placeholder {
+                    color: $dark-text-color;
+                    background-color: $dark-bg-color;
+                    opacity: 0.8;
+                    font-size: 18px;
+                }
 
                 &::placeholder {
                     color: $dark-text-color;

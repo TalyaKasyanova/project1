@@ -13,6 +13,7 @@
     &_blur {
         padding: 24px 0;
         background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
+        -webkit-backdrop-filter: blur(4.5px);
         backdrop-filter: blur(4.5px);
     }
 }
@@ -66,6 +67,14 @@
             }
         }
     }
+
+    &-link {
+        &:focus {
+            color: $light-button-hover-color;
+            font-weight: bold;
+        }
+    }
+
 }
 
 .activ {

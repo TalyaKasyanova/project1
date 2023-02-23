@@ -175,6 +175,7 @@ a {
   position: absolute;
   content: "";
   background: #F1897B;
+  -webkit-backdrop-filter: blur(4.5px);
   backdrop-filter: blur(4.5px);
   width: 85%;
   height: 13px;
@@ -253,6 +254,7 @@ a {
   background-size: 100% 20%;
   background-position: top;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .checkbox:checked + .box .header {
@@ -268,6 +270,10 @@ a {
   background: #68eecf;
   opacity: 0.3;
   transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
+}
+.checkbox:checked + .box .nav-link:focus {
+  color: #05b98f;
+  font-weight: bold;
 }
 .checkbox:checked + .box .activ::after {
   background: rgba(83, 243, 205, 0.3);
@@ -308,6 +314,7 @@ a {
 .checkbox:checked + .box .quote-text::before {
   background: url(../images/quote-icon.png);
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .checkbox:checked + .box .promises-text-box {
@@ -336,6 +343,30 @@ a {
   color: #ffffff;
   font-size: 18px;
 }
+.checkbox:checked + .box .form-item::-webkit-input-placeholder {
+  color: #ffffff;
+  background-color: #161926;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.checkbox:checked + .box .form-item::-moz-placeholder {
+  color: #ffffff;
+  background-color: #161926;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.checkbox:checked + .box .form-item:-ms-input-placeholder {
+  color: #ffffff;
+  background-color: #161926;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.checkbox:checked + .box .form-item::-ms-input-placeholder {
+  color: #ffffff;
+  background-color: #161926;
+  opacity: 0.8;
+  font-size: 18px;
+}
 .checkbox:checked + .box .form-item::placeholder {
   color: #ffffff;
   background-color: #161926;
@@ -362,6 +393,7 @@ a {
 .header_blur {
   padding: 24px 0;
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(4.5px);
   backdrop-filter: blur(4.5px);
 }
 
@@ -401,6 +433,10 @@ a {
 .nav-item:hover::before, .nav-item:focus::before {
   width: 100%;
 }
+.nav-link:focus {
+  color: #E54F3A;
+  font-weight: bold;
+}
 
 .activ::after {
   position: absolute;
@@ -434,6 +470,7 @@ body {
 
 a {
   cursor: pointer;
+  outline: 0;
 }
 
 .box {
@@ -441,6 +478,7 @@ a {
   background-size: 100% 20%;
   background-position: top;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -492,6 +530,7 @@ button {
   background: linear-gradient(92deg, rgba(33, 36, 54, 0.5) 0.04%, rgba(33, 36, 54, 0) 44.04%), url(../images/city.jpg);
   background-size: 50% 100%;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -584,6 +623,7 @@ button {
   color: #ffffff;
   background: linear-gradient(0deg, rgba(25, 28, 41, 0.84), rgba(25, 28, 41, 0.84)), url("../images/section-quote.jpg") no-repeat;
   background-size: cover;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .quote-text {
@@ -602,6 +642,7 @@ button {
   background: url(../images/quote-icon-ligth.png);
   background-size: 100%;
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
   width: 102px;
   height: 184px;
@@ -622,7 +663,8 @@ button {
   display: block;
   background: url(../images/tablet.png);
   background-repeat: no-repeat;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
   max-width: 970px;
   height: 610px;
   margin: auto;
@@ -648,7 +690,8 @@ button {
   background: linear-gradient(0deg, rgba(25, 28, 41, 0.84), rgba(25, 28, 41, 0.84)), url(../images/on-section.jpg);
   background-repeat: no-repeat;
   background-size: 50% 100%;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
   min-height: 540px;
 }
 
@@ -729,6 +772,7 @@ button {
   padding: 30px 40px;
   background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)), url(../images/client2.jpg);
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
   background-size: cover;
   color: #ffffff;
@@ -741,12 +785,14 @@ button {
 .client-item:first-child {
   background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)), url(../images/client1.jpg);
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
   background-size: cover;
 }
 .client-item:last-child {
   background: linear-gradient(0deg, rgba(25, 28, 41, 0.6), rgba(25, 28, 41, 0.6)), url(../images/client3.jpg);
   background-repeat: no-repeat;
+  -o-object-fit: cover;
   object-fit: cover;
   background-size: cover;
 }
@@ -812,6 +858,38 @@ button {
   line-height: 1.11;
   letter-spacing: 0.08em;
   opacity: 0.8;
+  background-color: #ffffff;
+}
+.form-item::-webkit-input-placeholder {
+  color: #262A3F;
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "PlayfairDisplayItalic";
+  background-color: #ffffff;
+}
+.form-item::-moz-placeholder {
+  color: #262A3F;
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "PlayfairDisplayItalic";
+  background-color: #ffffff;
+}
+.form-item:-ms-input-placeholder {
+  color: #262A3F;
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "PlayfairDisplayItalic";
+  background-color: #ffffff;
+}
+.form-item::-ms-input-placeholder {
+  color: #262A3F;
+  opacity: 0.5;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "PlayfairDisplayItalic";
   background-color: #ffffff;
 }
 .form-item::placeholder {
