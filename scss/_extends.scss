@@ -23,8 +23,10 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: $light-button-color;
+  -moz-border: inherit;
   border: inherit;
   position: relative;
+  -moz-background: transparent;
   background: transparent;
   cursor: pointer;
 
@@ -32,6 +34,7 @@
     position: absolute;
     content: "";
     background: $light-button-color;
+    -moz-backdrop-filter: blur(4.5px);
     backdrop-filter: blur(4.5px);
     width: 85%;
     height: 13px;

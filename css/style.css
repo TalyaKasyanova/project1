@@ -62,8 +62,6 @@ video {
   font: inherit;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
 }
 
 footer,
@@ -168,8 +166,10 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #F1897B;
+  -moz-border: inherit;
   border: inherit;
   position: relative;
+  -moz-background: transparent;
   background: transparent;
   cursor: pointer;
 }
@@ -177,6 +177,7 @@ a {
   position: absolute;
   content: "";
   background: #F1897B;
+  -moz-backdrop-filter: blur(4.5px);
   backdrop-filter: blur(4.5px);
   width: 85%;
   height: 13px;
@@ -219,7 +220,7 @@ a {
   height: 25px;
   border-radius: 15px;
   background-color: #E4E4E4;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .checkbox::after {
   content: "";
@@ -232,7 +233,7 @@ a {
   border-radius: 50%;
   background-color: #ffffff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .checkbox:checked::before {
   background-color: #689FF2;
@@ -269,11 +270,11 @@ a {
 .checkbox:checked + .box .nav-item::before {
   background: #68eecf;
   opacity: 0.3;
-  transition: all 0.5s cubic-bezier(0.19, 0.64, 0.96, 0.41);
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .checkbox:checked + .box .activ::after {
   background: rgba(83, 243, 205, 0.3);
-  transition: all 0.5s cubic-bezier(0.19, 0.64, 0.96, 0.41);
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .checkbox:checked + .box .main {
   color: #ffffff;
@@ -364,12 +365,13 @@ a {
 .header_blur {
   padding: 24px 0;
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
+  -moz-backdrop-filter: blur(4.5px);
   backdrop-filter: blur(4.5px);
 }
 
 .link-logo .logo-icon use {
   fill: #ffffff;
-  transition: all 0.5s cubic-bezier(0.19, 0.64, 0.96, 0.41);
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .link-logo:hover .logo-icon use, .link-logo:focus .logo-icon use {
   fill: #262A3F;
@@ -398,7 +400,7 @@ a {
   height: 3px;
   background: #F1897B;
   opacity: 0.3;
-  transition: all 0.5s cubic-bezier(0.19, 0.64, 0.96, 0.41);
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .nav-item:hover::before, .nav-item:focus::before {
   width: 100%;
@@ -413,7 +415,7 @@ a {
   left: 0;
   bottom: -8px;
   background: rgba(241, 137, 123, 0.3);
-  transition: all 0.5s cubic-bezier(0.19, 0.64, 0.96, 0.41);
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
   transform: translate(-50%, -50%);
   left: 50%;
 }
@@ -693,6 +695,7 @@ button {
   margin-top: 20px;
   border: 1px solid #E4E4E4;
   padding: 33px 79px;
+  transition: all 0.3s cubic-bezier(0.19, 0.64, 0.96, 0.41);
 }
 .promises-button::after {
   width: 37%;

@@ -21,7 +21,7 @@
         height: 25px;
         border-radius: 15px;
         background-color: $light-border-color;
-        transition: background-color 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
     }
 
     &::after {
@@ -35,7 +35,7 @@
         border-radius: 50%;
         background-color: $dark-text-color;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
     }
 
     &:checked::before {
@@ -92,7 +92,7 @@
                 &::before {
                     background: $dark-button-color;
                     opacity: 0.3;
-                    transition: all 0.5s cubic-bezier(.19, .64, .96, .41);
+                    transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
                 }
             }
         }
@@ -100,7 +100,7 @@
         .activ {
             &::after {
                 background: rgba(83, 243, 205, 0.3);
-                transition: all 0.5s cubic-bezier(.19, .64, .96, .41);
+                transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
             }
         }
 
