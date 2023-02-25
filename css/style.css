@@ -207,10 +207,11 @@ a {
   cursor: pointer;
   width: 50px;
   height: 25px;
+  -moz-appearance: initial;
 }
 .checkbox::before {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -222,7 +223,7 @@ a {
 }
 .checkbox::after {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 3px;
   left: 3px;
